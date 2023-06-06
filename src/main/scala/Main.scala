@@ -1,8 +1,9 @@
+import core.LocalHTMLWriter
 import wikipedia.scraper.EventsScraper
-
 
 object Main {
   def main(args: Array[String]): Unit = {
-    EventsScraper.scrape()
+    val eventsScraper = EventsScraper(LocalHTMLWriter)
+    eventsScraper.scrape()
   }
 }

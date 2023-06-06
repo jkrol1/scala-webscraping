@@ -1,15 +1,18 @@
 package wikipedia.scraper
 
-import core.Scraper
+import core.{LocalWriter, Scraper, Writer}
 import wikipedia.parser.EventLinkTableParser
+//import wikipedia.scraper.EventScraper
 import wikipedia.URL
 import org.jsoup.Jsoup
 
-object EventsScraper extends Scraper {
+class EventsScraper(override protected val writer: Writer) extends Scraper(writer) {
   override def scrape(url: String = URL.EVENTS.string): Unit = {
     val doc = Jsoup.connect(url).get()
+    writer.write(doc.outerHtml(), this.getClass.getSimpleName)
     val eventLinkElements = EventLinkTableParser.parse(doc)
-    val eventUrls = eventLinkElements.map(eventLink=>s"${URL.BASE.string}${eventLink.href}")
+    val eventUrls = eventLinkElements.map(eventLink => s"${URL.BASE.string}${eventLink.href}")
     println(eventUrls)
+    println("Done")
   }
 }
