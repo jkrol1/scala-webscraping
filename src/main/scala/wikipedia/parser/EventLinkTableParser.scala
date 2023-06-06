@@ -7,7 +7,7 @@ import wikipedia.parsedelements.EventLink
 import scala.jdk.CollectionConverters.*
 
 object EventLinkTableParser extends Parser {
-  override def parse(doc: Document): List[ParsedElement] = {
+  override def parse(doc: Document): List[EventLink] = {
     val eventsLinksElements = doc.select("table#Scheduled_events td:nth-child(2) a").asScala.toList ++
       doc.select("table#Past_events td:nth-child(2) a").asScala.toList
     for {
