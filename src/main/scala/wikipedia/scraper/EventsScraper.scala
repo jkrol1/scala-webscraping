@@ -1,6 +1,6 @@
 package wikipedia.scraper
 
-import core.{LocalWriter, Scraper, Writer}
+import core.{LocalHTMLWriter, Scraper, Writer}
 import wikipedia.parser.EventLinkTableParser
 //import wikipedia.scraper.EventScraper
 import wikipedia.URL
@@ -12,7 +12,5 @@ class EventsScraper(override protected val writer: Writer) extends Scraper(write
     writer.write(doc.outerHtml(), this.getClass.getSimpleName)
     val eventLinkElements = EventLinkTableParser.parse(doc)
     val eventUrls = eventLinkElements.map(eventLink => s"${URL.BASE.string}${eventLink.href}")
-    println(eventUrls)
-    println("Done")
   }
 }
