@@ -16,5 +16,5 @@ object LocalPathBuilder extends PathBuilder {
     s"scraped_parsed/${_build(scraperName, fileExtension)}"
 
   private def _build(scraperName: String, fileExtension: String): String =
-    s"${scraperName}_${Calendar.getInstance().getTime.toString.replace(" ", "_")}.$fileExtension"
+    s"${scraperName}_${Calendar.getInstance().getTimeInMillis.toString.replace(" ", "_")}.$fileExtension"
 }

@@ -1,6 +1,7 @@
 package wikipedia.parser
 
-import core.{ParsedElement, Parser}
+import java.net.URLDecoder
+import core.Parser
 import org.jsoup.nodes.Document
 import wikipedia.parsedelements.EventLink
 
@@ -12,6 +13,6 @@ object EventLinkTableParser extends Parser {
       doc.select("table#Past_events td:nth-child(2) a").asScala.toList
     for {
       link <- eventsLinksElements
-    } yield EventLink(link.attr("href"), link.text)
+    } yield EventLink(URLDecoder.decode(link.attr("href"), "UTF-8"), link.text)
   }
 }
