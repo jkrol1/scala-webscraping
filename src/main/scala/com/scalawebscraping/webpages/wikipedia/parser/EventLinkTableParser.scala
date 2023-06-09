@@ -1,10 +1,11 @@
 package com.scalawebscraping.webpages.wikipedia.parser
 
-import com.scalawebscraping.core.Parser
 import com.scalawebscraping.webpages.wikipedia.parsedelements.EventLink
-import org.jsoup.nodes.Document
 
 import java.net.URLDecoder
+import com.scalawebscraping.core.Parser
+import org.jsoup.nodes.Document
+
 import scala.jdk.CollectionConverters.*
 
 object EventLinkTableParser extends Parser[EventLink] {
