@@ -1,8 +1,8 @@
 package com.scalawebscraping.core
 
+import com.scalawebscraping.core.{ParsedElement, PathBuilder, Writer}
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import com.scalawebscraping.core.{Writer, PathBuilder, ParsedElement}
 
 trait Scraper {
   def scrape(url: String): List[ParsedElement]

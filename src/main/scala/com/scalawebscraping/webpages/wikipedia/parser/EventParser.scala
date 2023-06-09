@@ -1,8 +1,8 @@
 package com.scalawebscraping.webpages.wikipedia.parser
 
+import com.scalawebscraping.core.Parser
 import com.scalawebscraping.webpages.wikipedia.parsedelements.Event
 import org.jsoup.nodes.Document
-import com.scalawebscraping.core.Parser
 import org.jsoup.select.Elements
 
 import scala.jdk.CollectionConverters.*
