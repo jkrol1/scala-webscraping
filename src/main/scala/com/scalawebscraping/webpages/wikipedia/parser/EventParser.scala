@@ -1,13 +1,13 @@
-package wikipedia.parser
+package com.scalawebscraping.webpages.wikipedia.parser
 
+import com.scalawebscraping.webpages.wikipedia.parsedelements.Event
 import org.jsoup.nodes.Document
-import core.Parser
+import com.scalawebscraping.core.Parser
 import org.jsoup.select.Elements
-import wikipedia.parsedelements.Event
 
 import scala.jdk.CollectionConverters.*
 
-object EventParser extends Parser {
+object EventParser extends Parser[Event] {
   override def parse(doc: Document): List[Event] = {
     val title = parseTitle(doc)
     val infobox = parseInfoBox(doc)

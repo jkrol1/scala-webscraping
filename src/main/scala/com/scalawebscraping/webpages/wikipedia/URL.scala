@@ -1,4 +1,4 @@
-package wikipedia
+package com.scalawebscraping.webpages.wikipedia
 
 enum URL(val string: String) {
   case BASE extends URL("https://en.wikipedia.org")

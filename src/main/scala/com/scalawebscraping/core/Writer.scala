@@ -1,7 +1,7 @@
-package core
+package com.scalawebscraping.core
 
 import java.io.{File, PrintWriter}
-import core.{LocalPathBuilder, PathBuilder}
+import com.scalawebscraping.core.{LocalPathBuilder, PathBuilder}
 
 import java.nio.file.{Files, Paths}
 import scala.util.Try

@@ -1,6 +1,6 @@
-package wikipedia.parsedelements
+package com.scalawebscraping.webpages.wikipedia.parsedelements
 
-import core.ParsedElement
+import com.scalawebscraping.core.ParsedElement
 
 case class Event(name: String,
                  date: String,

@@ -1,4 +1,4 @@
-package core
+package com.scalawebscraping.core
 
 import java.util.Calendar
 
