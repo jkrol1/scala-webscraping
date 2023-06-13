@@ -3,7 +3,6 @@ package com.scalawebscraping.webpages.wikipedia
 import com.scalawebscraping.webpages.wikipedia.parsedelements.{Event, EventLink}
 import com.scalawebscraping.webpages.wikipedia.parser.{EventLinkTableParser, EventParser}
 import com.scalawebscraping.webpages.wikipedia.scraper.{EventLinkScraper, EventScraper}
-import com.scalawebscraping.core.LocalHTMLWriter
 
 import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success, Try}

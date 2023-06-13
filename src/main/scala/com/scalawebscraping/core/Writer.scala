@@ -6,13 +6,13 @@ import java.io.{File, PrintWriter}
 import java.nio.file.{Files, Paths}
 import scala.util.Try
 
-trait Writer(protected val pathBuilder: PathBuilder) {
+trait Writer(pathBuilder: PathBuilder) {
   def write(HTMLString: String, scraperName: String): Unit
 }
 
-object LocalHTMLWriter extends Writer(LocalPathBuilder) {
+class LocalHTMLWriter(pathBuilder: PathBuilder) extends Writer(pathBuilder) {
   def write(HTMLString: String, scraperName: String): Unit = Try {
-    val builtPath = pathBuilder.build(scraperName, "html")
+    val builtPath = pathBuilder.buildForScraped(scraperName, "html")
     Files.createDirectories(Paths.get(builtPath).getParent)
     val pw = new PrintWriter(new File(builtPath))
     pw.write(HTMLString)

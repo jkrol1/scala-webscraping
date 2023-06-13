@@ -6,6 +6,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "scala-webscraping",
     libraryDependencies ++= Seq(
-      "org.jsoup" % "jsoup" % "1.15.4"
+      "org.jsoup" % "jsoup" % "1.15.4",
+      "org.scalatest" %% "scalatest" % "3.2.10" % "test",
     )
   )
