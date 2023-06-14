@@ -1,10 +1,9 @@
 package unit
 
-import scala.util.matching.Regex
-
+import com.scalawebscraping.core.LocalPathBuilder
 import org.scalatest.flatspec.AnyFlatSpec
 
-import com.scalawebscraping.core.LocalPathBuilder
+import scala.util.matching.Regex
 
 class LocalPathBuilderSpec extends AnyFlatSpec {
   "A LocalPathBuilder" should "build local environment path for raw scraped data, specified scraper name and file extension" in {

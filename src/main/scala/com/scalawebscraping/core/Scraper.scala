@@ -1,6 +1,6 @@
 package com.scalawebscraping.core
 
-import com.scalawebscraping.core.{ParsedElement, PathBuilder, Writer, Fetcher}
+import com.scalawebscraping.core.{Fetcher, ParsedElement, PathBuilder, Writer}
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 

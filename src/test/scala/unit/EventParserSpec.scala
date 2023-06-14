@@ -1,11 +1,11 @@
 package unit
 
-import org.scalatest.flatspec.AnyFlatSpec
-import org.jsoup.nodes.Document
-import reflect.Selectable.reflectiveSelectable
-
 import com.scalawebscraping.core.LocalHTMLReader
 import com.scalawebscraping.webpages.wikipedia.parser.EventParser
+import org.jsoup.nodes.Document
+import org.scalatest.flatspec.AnyFlatSpec
+
+import scala.reflect.Selectable.reflectiveSelectable
 
 class EventParserSpec extends AnyFlatSpec {
 

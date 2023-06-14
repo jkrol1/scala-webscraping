@@ -1,14 +1,14 @@
 package com.scalawebscraping.webpages.wikipedia
 
+import com.scalawebscraping.core.ScraperBase
 import com.scalawebscraping.webpages.wikipedia.parsedelements.{Event, EventLink}
 import com.scalawebscraping.webpages.wikipedia.parser.{EventLinkTableParser, EventParser}
 import com.scalawebscraping.webpages.wikipedia.scraper.{EventLinkScraper, EventScraper}
 
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success, Try}
-import scala.concurrent.duration.Duration
-import concurrent.ExecutionContext.Implicits.global
-import com.scalawebscraping.core.ScraperBase
 
 object WikipediaScrapingController {
   def apply(): Unit = {

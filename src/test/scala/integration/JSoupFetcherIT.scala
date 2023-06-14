@@ -1,10 +1,9 @@
 package integration
 
-import org.jsoup.nodes.Document
-import org.scalatest.flatspec.AnyFlatSpec
-
 import com.scalawebscraping.core.JsoupFetcher
 import com.scalawebscraping.webpages.wikipedia.URL
+import org.jsoup.nodes.Document
+import org.scalatest.flatspec.AnyFlatSpec
 
 class JSoupFetcherIT extends AnyFlatSpec {
   "JSoupFetcher" should "fetch HTML from given URL and return Document object" in {
