@@ -1,10 +1,11 @@
 package unit
 
-import reflect.Selectable.reflectiveSelectable
-import org.scalatest.flatspec.AnyFlatSpec
-import org.jsoup.nodes.Document
-import com.scalawebscraping.core.{Fetcher, ParsedElement, Parser, LocalPathBuilder, ScraperBase, Writer}
+import com.scalawebscraping.core.*
 import com.scalawebscraping.webpages.wikipedia.parsedelements.EventLink
+import org.jsoup.nodes.Document
+import org.scalatest.flatspec.AnyFlatSpec
+
+import scala.reflect.Selectable.reflectiveSelectable
 
 class ScraperBaseSpec extends AnyFlatSpec {
 
