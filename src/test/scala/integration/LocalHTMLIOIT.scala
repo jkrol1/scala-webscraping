@@ -15,7 +15,7 @@ trait PathBuilderFixture extends SuiteMixin {
   val pathBuilder: PathBuilder = new PathBuilder {
     override def buildForScraped(scraperName: String, fileExtension: String): String = s"test/$scraperName.html"
 
-    override def buildForParsedElements(scraperName: String, fileExtension: String): String = "test_parsed/test.html"
+    override def buildForParsedElements(scraperName: String, fileExtension: String): String = "test_parsed/event_link_table_parser.html"
   }
 }
 
